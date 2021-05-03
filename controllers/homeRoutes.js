@@ -1,8 +1,7 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-
-router.get('/', (req, res) => {
-    res.render('signup');
+router.get("/", (req, res) => {
+  res.render("signup");
 });
 /* const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
