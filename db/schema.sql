@@ -1,2 +1,2 @@
-DROP DATABASE IF IT EXISTS subscription_db;
+DROP DATABASE IF EXISTS subscription_db;
 CREATE DATABASE subscription_db;
