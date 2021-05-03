@@ -3,7 +3,7 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const sequelize = require("./config/connection")
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const User = require("./models/User")
+// const User = require("./models/User")
 require("dotenv").config();
 
 const routes = require("./controllers");
@@ -25,7 +25,7 @@ app.set('view engine', 'handlebars');
 
 app.use(session(
   {
-    secret:process.env.SESSION_SECRET, // TODO: did I set this up correction in the .env file?
+    secret:"super secret secret", // TODO: did I set this up correction in the .env file?
     resave:false,
     cookie:{
       maxAge:1000*60*60*2 // TODO: sets cookie expriation two hours (should we use this?)
