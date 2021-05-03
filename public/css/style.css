@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#logoCard {
+    text-align: center;
+}
+
+.row {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
