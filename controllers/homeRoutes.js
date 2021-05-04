@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 router.get("/", (req, res) => {
   res.send("/api/User file");
 });
+
 //Creates a new user
 router.post("/signup", (req, res) => {
   User.create({
@@ -23,8 +24,12 @@ router.post("/signup", (req, res) => {
     .catch((err) => {
       console.log(err);
       res.status(500).json({ message: "something went wrong", err: err });
-    });
 });
+
+router.get('/dashboard', (req, res) => {
+  res.render('dashboard');
+});
+
 //finds user email and password logs them in
 router.post("/login", (req, res) => {
   User.findOne({

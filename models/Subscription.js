@@ -40,14 +40,15 @@ Subscription.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user",
-        key: "id",
-      },
-    },
-  },
-  {
+            model: 'user',
+            key: 'id'
+        },
+    }
+},
+{
     sequelize,
-  }
-);
+    freezeTableName: true,
+    modelName: 'subscription',
+})
 
 module.exports = Subscription;
