@@ -31,6 +31,8 @@ User.init({
     }
 },{
     sequelize,
+    freezeTableName: true,
+    modelName: 'user',
     hooks:{
         beforeCreate:async (newUser)=>{
             newUser.password = await bcrypt.hash(newUser.password,10);
