@@ -12,6 +12,7 @@ body {
     margin: 3vw;
     background-color: #9DBBE3;
     color: black;
+    font-family: 'Itim', cursive;
 }
 
 #logoCard {
@@ -37,6 +38,12 @@ a {
     position: relative;
 }
 
+#filterBtn {
+    background-color: #9DBBE3;
+    border: 0;
+    font-size: 200%;
+}
+
 #addSubBtn {
     border-radius: 100%;
     font-size: 200%;
@@ -47,6 +54,19 @@ a {
     position: absolute;
     bottom: 5vw;
     right: 5vw;
+}
+
+#buttonForm {
+    position: relative;
+}
+
+#buttonForm button {
+    width: 40%;
+}
+
+#deleteAdded, #deleteEdited {
+    position: absolute;
+    right: 0;
 }
 
 /*Colors:
