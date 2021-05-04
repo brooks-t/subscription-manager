@@ -46,7 +46,9 @@ Subscription.init({
     }
 },
 {
-    sequelize
+    sequelize,
+    freezeTableName: true,
+    modelName: 'subscription',
 })
 
 module.exports = Subscription
