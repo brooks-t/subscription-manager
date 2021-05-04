@@ -1,52 +1,53 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
-const bcrypt =require("bcrypt");
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
+const bcrypt = require("bcrypt");
 
 class Subscription extends Model {}
 
-Subscription.init({
-    
+Subscription.init(
+  {
     id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    
-    title:{
-        type: DataTypes.STRING,
-        allowNull:false
+
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-    category:{
-        type: DataTypes.STRING,
-        allowNull:false
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-    next_payment:{
-        type: DataTypes.DATE,
-        allowNull:false
+    next_payment: {
+      type: DataTypes.DATE,
+      allowNull: false,
     },
     billing_cycle: {
-        type: DataTypes.STRING,
-        allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     amount: {
-        type: DataTypes.FLOAT,
-        allowNull: false
+      type: DataTypes.FLOAT,
+      allowNull: false,
     },
     rating: {
-        type: DataTypes.INTEGER,
-        allowNull: false
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
     user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'user',
-            key: 'id'
-        },
-    }
-},
-{
-    sequelize
-})
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+      },
+    },
+  },
+  {
+    sequelize,
+  }
+);
 
-module.exports = User
+module.exports = Subscription;
