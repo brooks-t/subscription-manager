@@ -34,6 +34,19 @@ a {
 
 #subCard {
     height: 180vw;
+    position: relative;
+}
+
+#addSubBtn {
+    border-radius: 100%;
+    font-size: 200%;
+    height: 20vw;
+    width: 20vw;
+    background-color: #C5EABD;
+    border: 2px solid black;
+    position: absolute;
+    bottom: 5vw;
+    right: 5vw;
 }
 
 /*Colors:
