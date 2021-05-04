@@ -24,10 +24,11 @@ router.post("/signup", (req, res) => {
     .catch((err) => {
       console.log(err);
       res.status(500).json({ message: "something went wrong", err: err });
-});
+    });
 
-router.get('/dashboard', (req, res) => {
-  res.render('dashboard');
+  router.get('/dashboard', (req, res) => {
+    res.render('dashboard');
+  });
 });
 
 //finds user email and password logs them in
@@ -59,5 +60,13 @@ router.get("/logout", (req, res) => {
   req.session.destroy();
   res.json({ message: "logged out!" });
 });
+
+router.get("/addsub", (req, res => {
+  res.render('addsub');
+}))
+
+router.get("/editsub", (req, res => {
+  res.render('editsub');
+}))
 
 module.exports = router;
