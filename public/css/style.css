@@ -37,6 +37,12 @@ a {
     position: relative;
 }
 
+#filterBtn {
+    background-color: #9DBBE3;
+    border: 0;
+    font-size: 200%;
+}
+
 #addSubBtn {
     border-radius: 100%;
     font-size: 200%;
