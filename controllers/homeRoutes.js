@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 
 router.get('/', (req, res) => {
-    res.render('signup');
+  res.render('signup');
 });
 
 router.get('/signin', (req, res) => {
@@ -12,6 +12,10 @@ router.get('/signin', (req, res) => {
 router.get('/dashboard', (req, res) => {
   res.render('dashboard');
 });
+
+router.get('/addsub', (req, res) => {
+  res.render('addsub');
+})
 /* const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
 
