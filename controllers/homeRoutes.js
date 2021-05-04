@@ -16,6 +16,10 @@ router.get('/dashboard', (req, res) => {
 router.get('/addsub', (req, res) => {
   res.render('addsub');
 })
+
+router.get('/editsub', (req, res) => {
+  res.render('editsub');
+})
 /* const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
 
