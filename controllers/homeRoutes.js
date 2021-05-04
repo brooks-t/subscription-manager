@@ -6,6 +6,26 @@ router.get("/", (req, res) => {
   res.send("/api/User file");
 });
 
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+
+  res.render('signup');
+});
+
+router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+
+  res.render('signin');
+});
+
 //Creates a new user
 router.post("/signup", (req, res) => {
   User.create({
@@ -25,10 +45,10 @@ router.post("/signup", (req, res) => {
       console.log(err);
       res.status(500).json({ message: "something went wrong", err: err });
     });
+});
 
-  router.get('/dashboard', (req, res) => {
-    res.render('dashboard');
-  });
+router.get('/dashboard', (req, res) => {
+  res.render('dashboard');
 });
 
 //finds user email and password logs them in
@@ -55,18 +75,19 @@ router.post("/login", (req, res) => {
     }
   });
 });
+
 //logs out the user
 router.get("/logout", (req, res) => {
   req.session.destroy();
   res.json({ message: "logged out!" });
 });
 
-router.get("/addsub", (req, res => {
+router.get("/addsub", (req, res) => {
   res.render('addsub');
-}))
+})
 
-router.get("/editsub", (req, res => {
+router.get("/editsub", (req, res) => {
   res.render('editsub');
-}))
+})
 
 module.exports = router;

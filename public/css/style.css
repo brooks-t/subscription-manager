@@ -56,6 +56,10 @@ a {
     right: 5vw;
 }
 
+.addCard, .editCard {
+    background-color: #D2CFE9;
+}
+
 #buttonForm {
     position: relative;
 }

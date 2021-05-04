@@ -13,6 +13,17 @@
 
 <div class="card" id="subCard">
     <div class="card-body">
+        {{#if subscriptions.length}}
+        <div class="col-md-6 subscription-list">
+            {{#each subscriptions as |subscription|}}
+            <div class="row mb-2">
+                <div class="col-md-8">
+                    <h4><a href="/subscription/{{subscription.id}}">{{subscription.name}}</a></h4>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
         <a href="/addsub"><button type="button" id="addSubBtn">+</button></a>
     </div>
 </div>
