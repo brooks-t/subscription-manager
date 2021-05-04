@@ -8,6 +8,10 @@ router.get('/', (req, res) => {
 router.get('/signin', (req, res) => {
   res.render('signin');
 });
+
+router.get('/dashboard', (req, res) => {
+  res.render('dashboard');
+});
 /* const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
 
