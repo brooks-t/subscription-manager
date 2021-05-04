@@ -31,34 +31,42 @@ router.post("/signup", (req, res) => {
   });
 });
 
-  //finds user email and password logs them in
-  router.post("/login", (req, res) => {
-    User.findOne({
-      where: {
-        email: req.body.email,
-      },
-    }).then((foundUser) => {
-      console.log("foundUser");
-      console.log(foundUser);
-      if (!foundUser) {
-        return res.status(401).json({ message: "login failed" });
-      }
-      if (bcrypt.compareSync(req.body.password, foundUser.password)) {
-        req.session.user = {
-          id: foundUser.id,
-          email: foundUser.email,
-          isUser: true,
-        };
-        return res.json(foundUser);
-      } else {
-        return res.status(401).json({ message: "login failed" });
-      }
-    });
+//finds user email and password logs them in
+router.post("/login", (req, res) => {
+  User.findOne({
+    where: {
+      email: req.body.email,
+    },
+  }).then((foundUser) => {
+    console.log("foundUser");
+    console.log(foundUser);
+    if (!foundUser) {
+      return res.status(401).json({ message: "login failed" });
+    }
+    if (bcrypt.compareSync(req.body.password, foundUser.password)) {
+      req.session.user = {
+        id: foundUser.id,
+        email: foundUser.email,
+        isUser: true,
+      };
+      return res.json(foundUser);
+    } else {
+      return res.status(401).json({ message: "login failed" });
+    }
   });
-  //logs out the user
-  router.get("/logout", (req, res) => {
-    req.session.destroy();
-    res.json({ message: "logged out!" });
-  });
+});
+//logs out the user
+router.get("/logout", (req, res) => {
+  req.session.destroy();
+  res.json({ message: "logged out!" });
+});
 
-  module.exports = router;
+router.get("/addsub", (req, res => {
+  res.render('addsub');
+}))
+
+router.get("/editsub", (req, res => {
+  res.render('editsub');
+}))
+
+module.exports = router;
