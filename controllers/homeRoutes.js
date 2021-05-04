@@ -29,6 +29,7 @@ router.post("/signup", (req, res) => {
 router.get('/dashboard', (req, res) => {
   res.render('dashboard');
 });
+});
 
 //finds user email and password logs them in
 router.post("/login", (req, res) => {
