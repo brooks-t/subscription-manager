@@ -49,4 +49,4 @@ Subscription.init({
     sequelize
 })
 
-module.exports = User
+module.exports = Subscription
