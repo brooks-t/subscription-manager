@@ -56,6 +56,10 @@ a {
     right: 5vw;
 }
 
+.addCard, .editCard {
+    background-color: #D2CFE9;
+}
+
 #buttonForm {
     position: relative;
 }
@@ -67,6 +71,42 @@ a {
 #deleteAdded, #deleteEdited {
     position: absolute;
     right: 0;
+}
+
+#iconDiv {
+    font-size: 300%;
+    border: 2px solid black;
+    border-radius: 25%;
+    height: 15vw;
+    width: 15vw;
+    text-align: center;
+}
+
+#subCardBody {
+    padding-left: 0;
+}
+
+#subCard .row {
+    flex-wrap: nowrap;
+}
+
+#bigRow {
+    justify-content: flex-start;
+}
+
+#subs {
+    width: 100%;
+    font-size: 86%;
+    word-wrap: normal;
+}
+
+#subs .row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+#subInfo .row {
+    justify-content: flex-end;
 }
 
 /*Colors:
