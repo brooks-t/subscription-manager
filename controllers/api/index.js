@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const userRoutes = require('./userRoutes');
-const subscriptionRoutes = require('./subscriptionRoutes');
+const subRoutes = require('./subRoutes');
 
 router.use('/users', userRoutes);
-router.use('/subscriptions', subscriptionRoutes);
+router.use('/subscriptions', subRoutes);
 
 module.exports = router;
