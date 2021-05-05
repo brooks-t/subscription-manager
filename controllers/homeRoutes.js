@@ -15,6 +15,7 @@ router.get('/signup', (req, res) => {
 
 // Use withAuth middleware to prevent access to route
 router.get('/dashboard', withAuth, async (req, res) => {
+    console.log('LOGIN SESSION:', req.session.user);
     try {
       // Find the logged in user based on the session ID
       const userData = await User.findByPk(req.session.user_id, {
