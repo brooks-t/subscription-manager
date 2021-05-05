@@ -1,10 +1,8 @@
 const router = require("express").Router();
 const User = require("../models/User");
+const Subscription = require("../models/Subscription");
 const bcrypt = require("bcrypt");
-
-router.get("/", (req, res) => {
-  res.send("/api/User file");
-});
+const withAuth = require("../utils/auth");
 
 router.get('/signup', (req, res) => {
   // If the user is already logged in, redirect the request to another route
@@ -12,9 +10,30 @@ router.get('/signup', (req, res) => {
     res.redirect('/dashboard');
     return;
   }
-
   res.render('signup');
 });
+
+// Use withAuth middleware to prevent access to route
+router.get('/dashboard', withAuth, async (req, res) => {
+    console.log('LOGIN SESSION:', req.session.user);
+    try {
+      // Find the logged in user based on the session ID
+      const userData = await User.findByPk(req.session.user_id, {
+        attributes: { exclude: ['password'] },
+        include: [{ model: Subscription }],
+      });
+  
+      const user = userData.get({ plain: true });
+  
+      res.render('dashboard', {
+        ...user,
+        logged_in: true
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
@@ -23,71 +42,10 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('signin');
+  res.render('login');
 });
 
-//Creates a new user
-router.post("/signup", (req, res) => {
-  User.create({
-    username: req.body.username,
-    email: req.body.email,
-    password: req.body.password,
-  })
-    .then((newUser) => {
-      req.session.user = {
-        id: newUser.id,
-        email: newUser.email,
-        username: newUser.username,
-      };
-      res.json(newUser);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json({ message: "something went wrong", err: err });
-    });
-});
 
-router.get('/dashboard', (req, res) => {
-  res.render('dashboard');
-});
 
-//finds user email and password logs them in
-router.post("/login", (req, res) => {
-  User.findOne({
-    where: {
-      email: req.body.email,
-    },
-  }).then((foundUser) => {
-    console.log("foundUser");
-    console.log(foundUser);
-    if (!foundUser) {
-      return res.status(401).json({ message: "login failed" });
-    }
-    if (bcrypt.compareSync(req.body.password, foundUser.password)) {
-      req.session.user = {
-        id: foundUser.id,
-        email: foundUser.email,
-        isUser: true,
-      };
-      return res.json(foundUser);
-    } else {
-      return res.status(401).json({ message: "login failed" });
-    }
-  });
-});
-
-//logs out the user
-router.get("/logout", (req, res) => {
-  req.session.destroy();
-  res.json({ message: "logged out!" });
-});
-
-router.get("/addsub", (req, res) => {
-  res.render('addsub');
-})
-
-router.get("/editsub", (req, res) => {
-  res.render('editsub');
-})
 
 module.exports = router;
