@@ -1,6 +1,8 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
 
+    console.log("You've made it inside the form handler!");
+
     const title = document.querySelector('#addSubName').value.trim();
     const category = document.querySelector('#addSubCategory').value.trim();
     const next_payment = document.querySelector('#addSubNextPay').value.trim();
