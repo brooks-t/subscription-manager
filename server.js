@@ -24,10 +24,10 @@ app.set("view engine", "handlebars");
 
 app.use(
   session({
-    secret: "super secret secret", // TODO: did I set this up correction in the .env file?
+    secret: "super secret secret",
     resave: false,
     cookie: {
-      maxAge: 1000 * 60 * 60 * 2, // TODO: sets cookie expriation two hours (should we use this?)
+      maxAge: 1000 * 60 * 60 * 2,
     },
     saveUninitialized: true,
     store: new SequelizeStore({
