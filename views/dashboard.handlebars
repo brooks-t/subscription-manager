@@ -12,8 +12,74 @@
 </div>
 
 <div class="card" id="subCard">
-    <div class="card-body">
-        {{#if subscriptions.length}}
+    <div class="card-body" id="subCardBody">
+        <div class="card" id="subs">
+            <div class="card-body container-fluid">
+                <div class="row" id="bigRow">
+                    <div class="col-3">
+                        <div id="iconDiv"></div>
+                    </div>
+                    <div class="container-fluid" id="subInfo">
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="card-title" id="subTitle">Netflix</h5>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subAmount">$40.00</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subCycle">Monthly</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="card-text" id="subCategory">Streaming</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subRating">4 stars</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subNextPay">May 30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="subs">
+            <div class="card-body container-fluid">
+                <div class="row" id="bigRow">
+                    <div class="col-3">
+                        <div id="iconDiv"></div>
+                    </div>
+                    <div class="container-fluid" id="subInfo">
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="card-title" id="subTitle">Amazon</h5>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subAmount">$40.00</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subCycle">Monthly</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="card-text" id="subCategory">Streaming</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subRating">4 stars</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subNextPay">May 30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{!-- {{#if subscriptions.length}}
         <div class="col-md-6 subscription-list">
             {{#each subscriptions as |subscription|}}
             <div class="row mb-2">
@@ -23,7 +89,12 @@
             </div>
             {{/each}}
         </div>
-        {{/if}}
+        {{/if}} --}}
         <a href="/addsub"><button type="button" id="addSubBtn">+</button></a>
     </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./js/dashboard.js"></script>
