@@ -84,7 +84,7 @@ a {
     overflow: scroll;
 }
 
-#subCardBody {
+#subCardBody, #chartCardBody {
     padding-left: 0;
 }
 

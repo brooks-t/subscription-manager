@@ -41,6 +41,9 @@ router.get('/dashboard', withAuth, async (req, res) => {
     res.render('addsub');
   });
 
+  router.get('/chart', (req, res) => {
+    res.render('chart');
+  });
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
