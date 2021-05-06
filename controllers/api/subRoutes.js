@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { Subscription } = require("../../models");
 const withAuth = require("../../utils/auth");
-
+//creates a new subscription
 router.post("/", withAuth, async (req, res) => {
   try {
     const newSubscription = await Subscription.create({
@@ -13,6 +13,20 @@ router.post("/", withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+//edit subscription
+router.put("/:id", (req, res) => {
+  Subscription.update(req.body, {
+    where: {
+      id: req.params.id,
+      user_id: req.session.user_id,
+    },
+  }).then((subscription) => {
+    // find all associated tags from subscriptions
+    return Subscription.findAll({ where: { subscription_id: req.params.id } });
+  });
+});
+
+//delete subscription by id
 router.delete("/:id", withAuth, async (req, res) => {
   try {
     const subscriptionsData = await Subscription.destroy({
@@ -32,7 +46,5 @@ router.delete("/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-//edit
 
 module.exports = router;
