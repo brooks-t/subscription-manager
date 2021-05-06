@@ -1,11 +1,16 @@
 <div class="card">
-    <div class="card-body">
-        <div class="row">
-            <div class="col-10">
-                <h5 class="card-title text-center">Your Subscriptions</h5>
-            </div>
-            <div class="col-1">
-                <button type="button" id="filterBtn"><i class=" fa fa-sort"></i></button>
+    <div class="card-body" id="dashCard">
+        <div class="container-fluid">
+            <div class="row" id="dashRow">
+                <div class="col-2" id="dashLogo">
+                    S
+                </div>
+                <div class="col-2">
+                    <button type="button" id="chartBtn"><i class="fa fa-bar-chart"></i></button>
+                </div>
+                <div class="col-2">
+                    <button type="button" id="filterBtn"><i class="fa fa-sort"></i></button>
+                </div>
             </div>
         </div>
     </div>
@@ -13,6 +18,8 @@
 
 <div class="card" id="subCard">
     <div class="card-body" id="subCardBody">
+        {{!-- {{#if subscriptions.length}}
+        {{#each subscriptions as |subscription|}}
         <div class="card" id="subs">
             <div class="card-body container-fluid">
                 <div class="row" id="bigRow">
@@ -22,7 +29,43 @@
                     <div class="container-fluid" id="subInfo">
                         <div class="row">
                             <div class="col-4">
-                                <h5 class="card-title" id="subTitle">Netflix</h5>
+                                <h5 class="card-title" id="subTitle">{{title}}</h5>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subAmount">{{amount}}</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subCycle">{{billing_cycle}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="card-text" id="subCategory">{{category}}</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subRating">{{rating}}</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subNextPay">{{next_payment}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}} --}}
+
+        <div class="card" id="subs">
+            <div class="card-body container-fluid">
+                <div class="row" id="bigRow">
+                    <div class="col-3">
+                        <div id="iconDiv"></div>
+                    </div>
+                    <div class="container-fluid" id="subInfo">
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="card-title" id="subTitle">Amazon</h5>
                             </div>
                             <div class="col-4">
                                 <p class="card-text" id="subAmount">$40.00</p>
@@ -79,18 +122,141 @@
                 </div>
             </div>
         </div>
-        {{!-- {{#if subscriptions.length}}
-        <div class="col-md-6 subscription-list">
-            {{#each subscriptions as |subscription|}}
-            <div class="row mb-2">
-                <div class="col-md-8">
-                    <h4><a href="/subscription/{{subscription.id}}">{{subscription.name}}</a></h4>
+        <div class="card" id="subs">
+            <div class="card-body container-fluid">
+                <div class="row" id="bigRow">
+                    <div class="col-3">
+                        <div id="iconDiv"></div>
+                    </div>
+                    <div class="container-fluid" id="subInfo">
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="card-title" id="subTitle">Amazon</h5>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subAmount">$40.00</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subCycle">Monthly</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="card-text" id="subCategory">Streaming</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subRating">4 stars</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subNextPay">May 30</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            {{/each}}
         </div>
-        {{/if}} --}}
-        <a href="/addsub"><button type="button" id="addSubBtn">+</button></a>
+        <div class="card" id="subs">
+            <div class="card-body container-fluid">
+                <div class="row" id="bigRow">
+                    <div class="col-3">
+                        <div id="iconDiv"></div>
+                    </div>
+                    <div class="container-fluid" id="subInfo">
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="card-title" id="subTitle">Amazon</h5>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subAmount">$40.00</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subCycle">Monthly</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="card-text" id="subCategory">Streaming</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subRating">4 stars</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subNextPay">May 30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="subs">
+            <div class="card-body container-fluid">
+                <div class="row" id="bigRow">
+                    <div class="col-3">
+                        <div id="iconDiv"></div>
+                    </div>
+                    <div class="container-fluid" id="subInfo">
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="card-title" id="subTitle">Amazon</h5>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subAmount">$40.00</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subCycle">Monthly</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="card-text" id="subCategory">Streaming</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subRating">4 stars</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subNextPay">May 30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="subs">
+            <div class="card-body container-fluid">
+                <div class="row" id="bigRow">
+                    <div class="col-3">
+                        <div id="iconDiv"></div>
+                    </div>
+                    <div class="container-fluid" id="subInfo">
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="card-title" id="subTitle">Amazon</h5>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subAmount">$40.00</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subCycle">Monthly</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="card-text" id="subCategory">Streaming</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subRating">4 stars</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text" id="subNextPay">May 30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="addBtnDiv">
+            <a href="/addsub"><button type="button" id="addSubBtn">+</button></a>
+        </div>
     </div>
 </div>
 

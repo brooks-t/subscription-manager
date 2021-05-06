@@ -14,16 +14,23 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 //edit subscription
-router.put("/:id", (req, res) => {
-  Subscription.update(req.body, {
-    where: {
-      id: req.params.id,
-      user_id: req.session.user_id,
-    },
-  }).then((subscription) => {
-    // find all associated tags from subscriptions
-    return Subscription.findAll({ where: { subscription_id: req.params.id } });
-  });
+router.put("/:id", async (req, res) => {
+  try {
+    const subscriptionData = await Subscription.update(req.body, {
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+      individualHooks: true,
+    });
+    if (!subscriptionData[0]) {
+      res.status(404).json({ message: "No subscription with this id!" });
+      return;
+    }
+    res.status(200).json(subscriptionData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 //delete subscription by id

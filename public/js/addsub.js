@@ -26,6 +26,7 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
+    event.stopPropagation();
     document.location.replace('/dashboard');
 };
 
@@ -34,5 +35,5 @@ document
     .addEventListener('submit', newFormHandler);
 
 document
-    .querySelector('.addSub-form')
+    .querySelector('#deleteAdded')
     .addEventListener('click', delButtonHandler);
