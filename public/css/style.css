@@ -72,7 +72,13 @@ a {
     font-size: 200%;
 }
 
-#subCard, #chartCard {
+#logoutBtn {
+    background-color: #9DBBE3;
+    border: 0;
+    font-size: 200%;
+}
+
+#subCard {
     height: 180vw;
     position: relative;
     overflow: scroll;
