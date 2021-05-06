@@ -15,6 +15,16 @@ body {
     font-family: 'Itim', cursive;
 }
 
+#logo, #dashLogo {
+    font-family: 'Chicle', cursive;
+    border: 2px solid black;
+    border-radius: 100%;
+    text-align: center;
+    background-color: #E3C59D;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
 #logoCard {
     text-align: center;
 }
@@ -36,6 +46,7 @@ a {
 #subCard {
     height: 180vw;
     position: relative;
+    overflow: scroll;
 }
 
 #filterBtn {
@@ -51,13 +62,17 @@ a {
     width: 20vw;
     background-color: #C5EABD;
     border: 2px solid black;
-    position: absolute;
-    bottom: 5vw;
-    right: 5vw;
+    position: fixed;
+    bottom: 10vw;
+    right: 10vw;
 }
 
 .addCard, .editCard {
     background-color: #D2CFE9;
+}
+
+#addRow, #editRow {
+    align-items: center;
 }
 
 #buttonForm {
@@ -73,13 +88,34 @@ a {
     right: 0;
 }
 
+#dashCard {
+    padding-left: 0;
+}
+
+#dashLogo {
+    font-size: 200%;
+    margin-left: 1.5vw;
+}
+
+#dashRow {
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
 #iconDiv {
+    background-color: #E6E9CF;
     font-size: 300%;
     border: 2px solid black;
     border-radius: 25%;
     height: 15vw;
     width: 15vw;
     text-align: center;
+    font-family: 'Chicle', cursive;
+}
+
+#subs {
+    background-color: #D2CFE9;
+    border-radius: 20px;
 }
 
 #subCardBody {

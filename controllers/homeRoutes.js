@@ -4,7 +4,7 @@ const Subscription = require("../models/Subscription");
 const bcrypt = require("bcrypt");
 const withAuth = require("../utils/auth");
 
-router.get('/signup', (req, res) => {
+/* router.get('/signup', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/dashboard');
@@ -43,9 +43,21 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
-});
+}); */
 
+router.get('/dashboard', async (req, res) => {
+  res.render('dashboard', {
+  })
+})
 
+router.get('/addsub', async (req, res) => {
+  res.render('addsub', {
+  })
+})
 
+router.get('/editsub', async (req, res) => {
+  res.render('editsub', {
+  })
+})
 
 module.exports = router;
