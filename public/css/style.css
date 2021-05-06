@@ -19,6 +19,16 @@ body {
     text-align: center;
 }
 
+#logo, #dashLogo {
+    font-family: 'Chicle', cursive;
+    border: 2px solid black;
+    border-radius: 100%;
+    text-align: center;
+    background-color: #E3C59D;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
 .row {
     margin: 0;
 }
@@ -33,15 +43,76 @@ a {
     color: black;
 }
 
-#subCard {
-    height: 180vw;
-    position: relative;
+#dashCard {
+    padding-left: 0;
+}
+
+#dashRow {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#dashLogo {
+    font-size: 200%;
+    margin-left: 1.5vw;
+}
+
+#chartBtn {
+    background-color: #9DBBE3;
+    border: 0;
+    font-size: 250%;
+    text-align: center;
+    margin-left: 1vw;
 }
 
 #filterBtn {
     background-color: #9DBBE3;
     border: 0;
     font-size: 200%;
+}
+
+#subCard {
+    height: 180vw;
+    position: relative;
+    overflow: scroll;
+}
+
+#subCardBody {
+    padding-left: 0;
+}
+
+#subs {
+    background-color: #D2CFE9;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 86%;
+    word-wrap: normal;
+}
+
+#subCard .row {
+    flex-wrap: nowrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+#bigRow {
+    justify-content: flex-start;
+}
+
+#iconDiv {
+    background-color: #E6E9CF;
+    font-size: 300%;
+    border: 2px solid black;
+    border-radius: 25%;
+    height: 15vw;
+    width: 15vw;
+    text-align: center;
+    font-family: 'Chicle', cursive;
+}
+
+#subInfo .row {
+    justify-content: flex-end;
 }
 
 #addSubBtn {
@@ -51,13 +122,17 @@ a {
     width: 20vw;
     background-color: #C5EABD;
     border: 2px solid black;
-    position: absolute;
-    bottom: 5vw;
-    right: 5vw;
+    position: fixed;
+    bottom: 10vw;
+    right: 10vw;
 }
 
 .addCard, .editCard {
     background-color: #D2CFE9;
+}
+
+#addRow, #editRow {
+    align-items: center;
 }
 
 #buttonForm {
@@ -71,42 +146,6 @@ a {
 #deleteAdded, #deleteEdited {
     position: absolute;
     right: 0;
-}
-
-#iconDiv {
-    font-size: 300%;
-    border: 2px solid black;
-    border-radius: 25%;
-    height: 15vw;
-    width: 15vw;
-    text-align: center;
-}
-
-#subCardBody {
-    padding-left: 0;
-}
-
-#subCard .row {
-    flex-wrap: nowrap;
-}
-
-#bigRow {
-    justify-content: flex-start;
-}
-
-#subs {
-    width: 100%;
-    font-size: 86%;
-    word-wrap: normal;
-}
-
-#subs .row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-#subInfo .row {
-    justify-content: flex-end;
 }
 
 /*Colors:
