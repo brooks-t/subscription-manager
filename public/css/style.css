@@ -29,6 +29,10 @@ body {
     padding-right: 4vw;
 }
 
+.backbutton {
+    transform: scale(2);
+}
+
 .row {
     margin: 0;
 }

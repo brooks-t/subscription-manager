@@ -1,5 +1,6 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
+    console.log("YOU CLICKED THE SAVE BUTTON");
 
     const title = document.querySelector('#addSubName').value.trim();
     const category = document.querySelector('#addSubCategory').value.trim();

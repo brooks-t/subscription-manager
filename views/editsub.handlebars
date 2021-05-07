@@ -1,8 +1,8 @@
 <div class="card editCard">
   <div class="card-body">
     <div class="row" id="editRow">
-      <div class="col-2" id="dashLogo">
-        S
+      <div class="col-2">
+        <a href="/dashboard"><i class="fa fa-arrow-left backbutton"></i></a>
       </div>
       <div class="col-9">
         <h5 class="card-title text-center">Edit Subscription</h5>
@@ -13,7 +13,7 @@
 
 <div class="card editCard">
     <div class="card-body">
-        <form class="form editSub-form">
+        <form class="form editSub-form" data-id="{{id}}">
             <div class="form-group">
                 <label for="editSubName">Name:</label>
                 <input class="form-control" type="text" id="editSubName" value="{{title}}" />
@@ -24,7 +24,7 @@
             </div>
             <div class="form-group">
                 <label for="editSubNextPay">Next Payment:</label>
-                <input class="form-control" type="text" id="editSubNextPay" value="{{next_payment}}" />
+                <input class="form-control" type="text" id="editSubNextPay" value="{{format_date next_payment}}" />
             </div>
             <div class="form-group">
                 <label for="editSubCycle">Cycle:</label>
