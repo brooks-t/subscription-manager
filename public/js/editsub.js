@@ -1,8 +1,10 @@
 const editFormHandler = async (event) => {
+    console.log('YOU CLICKED THE SAVE BUTTON');
+    
     event.preventDefault();
+
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
-
         const title = document.querySelector('#editSubName').value.trim();
         const category = document.querySelector('#editSubCategory').value.trim();
         const next_payment = document.querySelector('#editSubNextPay').value.trim();
@@ -45,9 +47,9 @@ const delButtonHandler = async (event) => {
 };
 
 document
-    .querySelector('#editSub-form')
+    .querySelector('.editSub-form')
     .addEventListener('submit', editFormHandler);
 
 document
-    .querySelector('#editSub-form')
+    .querySelector('#deleteEdited')
     .addEventListener('click', delButtonHandler);

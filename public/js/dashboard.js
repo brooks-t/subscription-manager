@@ -19,27 +19,7 @@ const logout = async () => {
     }
 };
 
-const editSub = async (event) => {
-    event.stopPropagation();
-
-    const response = await fetch(`/editsub/${id}`, {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-    });
-
-    if (response.ok) {
-        document.location.replace(`/editsub/${id}`);
-    } else {
-        alert(response.statusText);
-    }
-};
-
 document
     .querySelector('#logoutBtn')
     .addEventListener('click', logout);
-
-document
-    .querySelectorAll('.substers').forEach( sub => {
-        sub.addEventListener('click', editSub);
-    })
     
