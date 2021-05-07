@@ -16,27 +16,62 @@
     <form class="form addSub-form">
       <div class="form-group">
         <label for="addSubName">Name:</label>
-        <input class="form-control" type="text" id="addSubName" />
+        <input class="form-control" type="text" id="addSubName" required />
       </div>
       <div class="form-group">
         <label for="addSubCategory">Category:</label>
-        <input class="form-control" type="text" id="addSubCategory" />
+        <select class="form-control" type="text" id="addSubCategory" required>
+          <option></option>
+          <option>Beauty/Grooming</option>
+          <option>Books</option>
+          <option>Education</option>
+          <option>Fashion/Clothing</option>
+          <option>Food/Grocery</option>
+          <option>Health/Fitness</option>
+          <option>Kids</option>
+          <option>Music/Audio</option>
+          <option>News</option>
+          <option>Nutrition/Supps</option>
+          <option>Pets</option>
+          <option>Software</option>
+          <option>Shopping</option>
+          <option>Transportation</option>
+          <option>Video</option>
+          <option>Other</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="addSubNextPay">Next Payment:</label>
-        <input class="form-control" type="text" id="addSubNextPay" />
+        <input class="form-control" type="text" placeholder="MM/DD/YYYY" id="addSubNextPay" required/>
       </div>
       <div class="form-group">
         <label for="addSubCycle">Cycle:</label>
-        <input class="form-control" type="text" id="addSubCycle" />
+        <select class="form-control" type="text" id="addSubCycle" required>
+          <option></option>
+          <option>Weekly</option>
+          <option>Biweekly</option>
+          <option>4-weekly</option>
+          <option>Monthly</option>
+          <option>Bimonthly</option>
+          <option>Quarterly</option>
+          <option>Half-yearly</option>
+          <option>Yearly</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="addSubAmount">Amount (USD):</label>
-        <input class="form-control" type="text" id="addSubAmount" />
+        <input class="form-control" type="text" placeholder="0.00" id="addSubAmount" required/>
       </div>
       <div class="form-group">
         <label for="addSubRating">Rating:</label>
-        <input class="form-control" type="text" id="addSubRating" />
+        <select class="form-control" type="text" id="addSubRating" required>
+          <option></option>
+          <option>5</option>
+          <option>4</option>
+          <option>3</option>
+          <option>2</option>
+          <option>1</option>
+        </select>
       </div>
 
       <div class="form-group" id="buttonForm">
