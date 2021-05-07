@@ -4,17 +4,17 @@ let myChart = new Chart(ctx, {
   type: "bar",
   data: {
     labels: [
-      "january",
-      "february",
-      "march",
-      "may",
-      "june",
-      "july",
-      "august",
-      "september",
-      "october",
-      "november",
-      "december",
+      "January",
+      "February",
+      "March",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
     ],
     datasets: [
       {
