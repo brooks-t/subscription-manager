@@ -16,27 +16,62 @@
         <form class="form editSub-form" data-id="{{id}}">
             <div class="form-group">
                 <label for="editSubName">Name:</label>
-                <input class="form-control" type="text" id="editSubName" value="{{title}}" />
+                <input class="form-control" type="text" id="editSubName" value="{{title}}" required/>
             </div>
             <div class="form-group">
                 <label for="editSubCategory">Category:</label>
-                <input class="form-control" type="text" id="editSubCategory" value="{{category}}" />
+                <select class="form-control" type="text" id="editSubCategory" value="{{category}}" required>
+                  <option>{{category}}</option>
+                  <option>Beauty/Grooming</option>
+                  <option>Books</option>
+                  <option>Education</option>
+                  <option>Fashion/Clothing</option>
+                  <option>Food/Grocery</option>
+                  <option>Health/Fitness</option>
+                  <option>Kids</option>
+                  <option>Music/Audio</option>
+                  <option>News</option>
+                  <option>Nutrition/Supps</option>
+                  <option>Pets</option>
+                  <option>Software</option>
+                  <option>Shopping</option>
+                  <option>Transportation</option>
+                  <option>Video</option>
+                  <option>Other</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="editSubNextPay">Next Payment:</label>
-                <input class="form-control" type="text" id="editSubNextPay" value="{{format_date next_payment}}" />
+                <input class="form-control" type="text" placeholder="MM/DD/YYYY" id="editSubNextPay" value="{{format_date next_payment}}" required/>
             </div>
             <div class="form-group">
                 <label for="editSubCycle">Cycle:</label>
-                <input class="form-control" type="text" id="editSubCycle" value="{{billing_cycle}}" />
+                <select class="form-control" type="text" id="editSubCycle" value="{{billing_cycle}}" required>
+                  <option>{{billing_cycle}}</option>
+                  <option>Weekly</option>
+                  <option>Biweekly</option>
+                  <option>4-weekly</option>
+                  <option>Monthly</option>
+                  <option>Bimonthly</option>
+                  <option>Quarterly</option>
+                  <option>Half-yearly</option>
+                  <option>Yearly</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="editSubAmount">Amount (USD):</label>
-                <input class="form-control" type="text" id="editSubAmount" value="{{amount}}" />
+                <input class="form-control" type="text" id="editSubAmount" placeholder="0.00" value="{{amount}}" required/>
             </div>
             <div class="form-group">
                 <label for="editSubRating">Rating:</label>
-                <input class="form-control" type="text" id="editSubRating" value="{{rating}}" />
+                <select class="form-control" type="text" id="editSubRating" value="{{rating}}" required>
+                  <option>{{rating}}</option>
+                  <option>5</option>
+                  <option>4</option>
+                  <option>3</option>
+                  <option>2</option>
+                  <option>1</option>
+                </select>
             </div>
 
             <div class="form-group" id="buttonForm">
