@@ -8,8 +8,14 @@
                 <div class="col-2">
                     <a href="/chart"><button type="button" id="chartBtn"><i class="fa fa-bar-chart"></i></button></a>
                 </div>
-                <div class="col-2">
-                    <button type="button" id="filterBtn"><i class="fa fa-sort"></i></button>
+                <div class="col-2 dropdown">
+                    <button type="button" id="filterBtn"><i onclick="dropDown()"
+                            class="dropbtn fa fa-sort"></i></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#" id="alphatical">Alphabetically</a>
+                        <a href="#" id="highToLow">Highest to lowest price</a>
+                        <a href="#" id="lowToHigh">Lowest to highest price</a>
+                    </div>
                 </div>
                 <div class="col-2">
                     <button type="button" id="logoutBtn"><i class="fa fa-sign-out"></i></button>
@@ -24,7 +30,7 @@
         {{#if subscriptions.length}}
         {{#each subscriptions as |subscription|}}
         <a href="/editsub/{{id}}">
-            <div class="card substers" id="subs">
+            <div class="card substers" id="subs" data-category="{{amount}}">
                 <div class="card-body container-fluid">
                     <div class="row" id="bigRow">
                         <div class="col-3">
@@ -36,7 +42,7 @@
                                     <h5 class="card-title" id="subTitle">{{title}}</h5>
                                 </div>
                                 <div class="col-4">
-                                    <p class="card-text" id="subAmount">{{amount}}</p>
+                                    <p class="card-text" id="subAmount">${{amount}}</p>
                                 </div>
                                 <div class="col-4">
                                     <p class="card-text" id="subCycle">{{billing_cycle}}</p>
