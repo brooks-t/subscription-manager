@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #b1b1b1;
+}
+
+.card {
+    margin: 3vw;
+    background-color: #9DBBE3;
+    color: black;
+    font-family: 'Itim', cursive;
+}
+
+#logoCard {
+    text-align: center;
+}
+
+#logo, #dashLogo {
+    font-family: 'Chicle', cursive;
+    border: 2px solid black;
+    border-radius: 100%;
+    text-align: center;
+    background-color: #E3C59D;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.backbutton {
+    transform: scale(2);
+}
+
+.row {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn {
+    background-color: #FFE0BE;
+    color: black;
+}
+
+#dashCard {
+    padding-left: 0;
+}
+
+#dashRow {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#dashLogo {
+    font-size: 200%;
+    margin-left: 1.5vw;
+}
+
+#chartBtn {
+    background-color: #9DBBE3;
+    border: 0;
+    font-size: 250%;
+    text-align: center;
+    margin-left: 1vw;
+}
+
+#filterBtn {
+    background-color: #9DBBE3;
+    border: 0;
+    font-size: 200%;
+}
+
+#logoutBtn {
+    background-color: #9DBBE3;
+    border: 0;
+    font-size: 200%;
+}
+
+#subCard {
+    height: 180vw;
+    position: relative;
+    overflow: scroll;
+}
+
+#subCardBody, #chartCardBody {
+    padding-left: 0;
+}
+
+#subs {
+    background-color: #D2CFE9;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 86%;
+    word-wrap: normal;
+}
+
+#subCard .row {
+    flex-wrap: nowrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+#bigRow {
+    justify-content: flex-start;
+}
+
+#iconDiv {
+    background-color: #E6E9CF;
+    font-size: 300%;
+    border: 2px solid black;
+    border-radius: 25%;
+    height: 15vw;
+    width: 15vw;
+    text-align: center;
+    font-family: 'Chicle', cursive;
+}
+
+#subInfo .row {
+    justify-content: flex-end;
+}
+
+#addSubBtn {
+    border-radius: 100%;
+    font-size: 200%;
+    height: 20vw;
+    width: 20vw;
+    background-color: #C5EABD;
+    border: 2px solid black;
+    position: fixed;
+    bottom: 10vw;
+    right: 10vw;
+}
+
+.addCard, .editCard {
+    background-color: #D2CFE9;
+}
+
+#addRow, #editRow {
+    align-items: center;
+}
+
+#buttonForm {
+    position: relative;
+}
+
+#buttonForm button {
+    width: 40%;
+}
+
+#deleteAdded, #deleteEdited {
+    position: absolute;
+    right: 0;
+}
+
+/*Colors:
+#FFE0BE: orange
+#FFF1CC: yellow
+#C5EABD: green
+#D2CFE9: indigo
+#F5D8F2: purple
+*/
