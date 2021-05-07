@@ -16,11 +16,11 @@
     <form class="form addSub-form">
       <div class="form-group">
         <label for="addSubName">Name:</label>
-        <input class="form-control" type="text" id="addSubName" />
+        <input class="form-control" type="text" id="addSubName" required />
       </div>
       <div class="form-group">
         <label for="addSubCategory">Category:</label>
-        <select class="form-control" type="text" id="addSubCategory">
+        <select class="form-control" type="text" id="addSubCategory" required>
           <option></option>
           <option>Beauty/Grooming</option>
           <option>Books</option>
@@ -42,11 +42,11 @@
       </div>
       <div class="form-group">
         <label for="addSubNextPay">Next Payment:</label>
-        <input class="form-control" type="text" placeholder="MM/DD/YYYY" id="addSubNextPay" />
+        <input class="form-control" type="text" placeholder="MM/DD/YYYY" id="addSubNextPay" required/>
       </div>
       <div class="form-group">
         <label for="addSubCycle">Cycle:</label>
-        <select class="form-control" type="text" id="addSubCycle">
+        <select class="form-control" type="text" id="addSubCycle" required>
           <option></option>
           <option>Weekly</option>
           <option>Biweekly</option>
@@ -60,11 +60,11 @@
       </div>
       <div class="form-group">
         <label for="addSubAmount">Amount (USD):</label>
-        <input class="form-control" type="text" id="addSubAmount" />
+        <input class="form-control" type="text" placeholder="0.00" id="addSubAmount" required/>
       </div>
       <div class="form-group">
         <label for="addSubRating">Rating:</label>
-        <select class="form-control" type="text" id="addSubRating">
+        <select class="form-control" type="text" id="addSubRating" required>
           <option></option>
           <option>5</option>
           <option>4</option>

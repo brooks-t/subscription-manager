@@ -16,11 +16,11 @@
         <form class="form editSub-form" data-id="{{id}}">
             <div class="form-group">
                 <label for="editSubName">Name:</label>
-                <input class="form-control" type="text" id="editSubName" value="{{title}}" />
+                <input class="form-control" type="text" id="editSubName" value="{{title}}" required/>
             </div>
             <div class="form-group">
                 <label for="editSubCategory">Category:</label>
-                <select class="form-control" type="text" id="editSubCategory" value="{{category}}">
+                <select class="form-control" type="text" id="editSubCategory" value="{{category}}" required>
                   <option>{{category}}</option>
                   <option>Beauty/Grooming</option>
                   <option>Books</option>
@@ -42,11 +42,11 @@
             </div>
             <div class="form-group">
                 <label for="editSubNextPay">Next Payment:</label>
-                <input class="form-control" type="text" placeholder="MM/DD/YYYY" id="editSubNextPay" value="{{format_date next_payment}}" />
+                <input class="form-control" type="text" placeholder="MM/DD/YYYY" id="editSubNextPay" value="{{format_date next_payment}}" required/>
             </div>
             <div class="form-group">
                 <label for="editSubCycle">Cycle:</label>
-                <select class="form-control" type="text" id="editSubCycle" value="{{billing_cycle}}">
+                <select class="form-control" type="text" id="editSubCycle" value="{{billing_cycle}}" required>
                   <option>{{billing_cycle}}</option>
                   <option>Weekly</option>
                   <option>Biweekly</option>
@@ -60,11 +60,11 @@
             </div>
             <div class="form-group">
                 <label for="editSubAmount">Amount (USD):</label>
-                <input class="form-control" type="text" id="editSubAmount" value="{{amount}}" />
+                <input class="form-control" type="text" id="editSubAmount" placeholder="0.00" value="{{amount}}" required/>
             </div>
             <div class="form-group">
                 <label for="editSubRating">Rating:</label>
-                <select class="form-control" type="text" id="editSubRating" value="{{rating}}">
+                <select class="form-control" type="text" id="editSubRating" value="{{rating}}" required>
                   <option>{{rating}}</option>
                   <option>5</option>
                   <option>4</option>
