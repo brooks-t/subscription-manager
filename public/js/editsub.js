@@ -1,5 +1,4 @@
 const editFormHandler = async (event) => {
-    console.log('YOU CLICKED THE SAVE BUTTON');
     
     event.preventDefault();
 
