@@ -5,14 +5,27 @@
 }
 
 body {
-    background-color: #b1b1b1;
+    background-color: #4d4d52;
+    max-width: 800px;
+    margin: auto;
+}
+
+.card-title {
+    font-family: 'Itim', cursive;
 }
 
 .card {
     margin: 3vw;
-    background-color: #9DBBE3;
+    background-color: #b3e1ee;
     color: black;
-    font-family: 'Itim', cursive;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sub-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 125%;
+    margin-bottom: 0px;
 }
 
 #logoCard {
@@ -29,12 +42,22 @@ body {
     padding-right: 4vw;
 }
 
+#subster-logo {
+    width: 100%;
+    height: auto;
+}
+
+.substers {
+    width: 90%;
+}
+
 .backbutton {
     transform: scale(2);
 }
 
 .row {
     margin: 0;
+    padding: 0;
 }
 
 a {
@@ -43,12 +66,13 @@ a {
 }
 
 .btn {
-    background-color: #FFE0BE;
+    background-color: #fcbe29;
     color: black;
 }
 
 #dashCard {
-    padding-left: 0;
+    display: flex;
+    justify-content: center;
 }
 
 #dashRow {
@@ -59,45 +83,68 @@ a {
 
 #dashLogo {
     font-size: 200%;
-    margin-left: 1.5vw;
 }
 
 #chartBtn {
-    background-color: #9DBBE3;
+    background-color: #b3e1ee;
     border: 0;
     font-size: 250%;
-    text-align: center;
-    margin-left: 1vw;
 }
 
 #filterBtn {
-    background-color: #9DBBE3;
+    background-color: #b3e1ee;
     border: 0;
     font-size: 200%;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  
+  .show {display: block;}
+
 #logoutBtn {
-    background-color: #9DBBE3;
+    background-color: #b3e1ee;
     border: 0;
     font-size: 200%;
 }
 
 #subCard {
-    height: 180vw;
+    height: 83vh;
     position: relative;
     overflow: scroll;
 }
 
-#subCardBody, #chartCardBody {
+#chartCardBody {
     padding-left: 0;
 }
 
 #subs {
-    background-color: #D2CFE9;
-    border-radius: 20px;
+    background-color: #e6eff8;
+    border-radius: 10px;
     width: 100%;
     font-size: 86%;
     word-wrap: normal;
+    margin: 10px auto;
 }
 
 #subCard .row {
@@ -107,16 +154,16 @@ a {
 }
 
 #bigRow {
-    justify-content: flex-start;
+    align-content: center;
 }
 
 #iconDiv {
-    background-color: #E6E9CF;
+    background-color: #C5EABD;
+    color: #4d4d52;
     font-size: 300%;
-    border: 2px solid black;
-    border-radius: 25%;
-    height: 15vw;
-    width: 15vw;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
     text-align: center;
     font-family: 'Chicle', cursive;
 }
@@ -126,19 +173,16 @@ a {
 }
 
 #addSubBtn {
-    border-radius: 100%;
-    font-size: 200%;
-    height: 20vw;
-    width: 20vw;
-    background-color: #C5EABD;
-    border: 2px solid black;
+    height: auto;
+    width: 20%;
+    max-width: 100px;
     position: fixed;
-    bottom: 10vw;
-    right: 10vw;
+    bottom: 5%;
+    right: 7%;
 }
 
 .addCard, .editCard {
-    background-color: #D2CFE9;
+    background-color: #b3e1ee;
 }
 
 #addRow, #editRow {
@@ -164,4 +208,8 @@ a {
 #C5EABD: green
 #D2CFE9: indigo
 #F5D8F2: purple
+#9DBBE3: light blue
+font-family: 'Itim', cursive;
+background-color: #b1b1b1
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 */
