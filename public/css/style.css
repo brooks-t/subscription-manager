@@ -128,7 +128,7 @@ a {
 
 #subs {
     background-color: #e6eff8;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 100%;
     font-size: 86%;
     word-wrap: normal;
@@ -148,7 +148,7 @@ a {
     background-color: #4d4d52;
     color: #e6eff8;
     font-size: 300%;
-    border-radius: 25%;
+    border-radius: 10px;
     height: 100%;
     width: 100%;
     text-align: center;
@@ -161,11 +161,13 @@ a {
 
 #addSubBtn {
     border-radius: 100%;
-    font-size: 200%;
+    font-size: 300%;
+    color: black;
     height: 20vw;
     width: 20vw;
-    background-color: #C5EABD;
-    border: 2px solid black;
+    background-color: #bdd002;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
     position: fixed;
     bottom: 10vw;
     right: 10vw;
