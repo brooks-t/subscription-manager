@@ -2,8 +2,8 @@
     <div class="card-body" id="dashCard">
         <div class="container-fluid p-0">
             <div class="row no-gutters" id="dashRow">
-                <div class="col-2" id="dashLogo">
-                    S
+                <div class="col-2">
+                    <img class="img-fluid subster-logo" src="../img/subster-logo.png">
                 </div>
                 <div class="col-2 d-flex justify-content-center">
                     <a href="/chart"><button type="button" id="chartBtn"><i class="fa fa-bar-chart"></i></button></a>
@@ -26,7 +26,7 @@
 </div>
 
 <div class="card" id="subCard">
-    <div class="card-body" id="subCardBody">
+    <div class="card-body p-2" id="subCardBody">
         {{#if subscriptions.length}}
         {{#each subscriptions as |subscription|}}
         <a href="/editsub/{{id}}">
@@ -65,14 +65,12 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </a>
         {{/each}}
-        {{/if}}
-
-        <div id="addBtnDiv">
-            <a href="/addsub"><button type="button" id="addSubBtn">+</button></a>
-        </div>
+        {{/if}}  
+        <a href="/addsub"><img class="img-fluid" src="../img/plus.png" id="addSubBtn"></a>
     </div>
 </div>
 
