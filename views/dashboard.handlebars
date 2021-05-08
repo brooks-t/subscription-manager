@@ -1,14 +1,14 @@
 <div class="card">
     <div class="card-body" id="dashCard">
-        <div class="container-fluid">
-            <div class="row" id="dashRow">
-                <div class="col-2" id="dashLogo">
-                    S
-                </div>
+        <div class="container-fluid p-0">
+            <div class="row no-gutters" id="dashRow">
                 <div class="col-2">
+                    <img class="img-fluid subster-logo" src="../img/subster-logo.png">
+                </div>
+                <div class="col-2 d-flex justify-content-center">
                     <a href="/chart"><button type="button" id="chartBtn"><i class="fa fa-bar-chart"></i></button></a>
                 </div>
-                <div class="col-2 dropdown">
+                <div class="col-2 d-flex justify-content-center dropdown">
                     <button type="button" id="filterBtn"><i onclick="dropDown()"
                             class="dropbtn fa fa-sort"></i></button>
                     <div id="myDropdown" class="dropdown-content">
@@ -17,7 +17,7 @@
                         <a href="#" id="lowToHigh">Lowest to highest price</a>
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-2 d-flex justify-content-center">
                     <button type="button" id="logoutBtn"><i class="fa fa-sign-out"></i></button>
                 </div>
             </div>
@@ -26,7 +26,7 @@
 </div>
 
 <div class="card" id="subCard">
-    <div class="card-body" id="subCardBody">
+    <div class="card-body p-2" id="subCardBody">
         {{#if subscriptions.length}}
         {{#each subscriptions as |subscription|}}
         <a href="/editsub/{{id}}">
@@ -37,23 +37,26 @@
                             <div id="iconDiv"></div>
                         </div>
                         <div class="container-fluid" id="subInfo">
-                            <div class="row">
-                                <div class="col-4">
-                                    <h5 class="card-title" id="subTitle">{{title}}</h5>
+                            <div class="row no-gutters">
+                                <div class="col-8">
+                                    <p class="sub-title" id="subTitle">{{title}}</p>
                                 </div>
                                 <div class="col-4">
-                                    <p class="card-text" id="subAmount">${{amount}}</p>
+                                    <p class="sub-title" id="subAmount">${{amount}}</p>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-8">
+                                    <p class="card-text" id="subCategory">{{category}}</p>
                                 </div>
                                 <div class="col-4">
                                     <p class="card-text" id="subCycle">{{billing_cycle}}</p>
                                 </div>
+                                
                             </div>
-                            <div class="row">
-                                <div class="col-4">
-                                    <p class="card-text" id="subCategory">{{category}}</p>
-                                </div>
-                                <div class="col-4">
-                                    <p class="card-text" id="subRating">{{rating}}</p>
+                            <div class="row no-gutters">
+                                <div class="col-8">
+                                    <p class="card-text" id="subRating">{{rating}}⭐</p>
                                 </div>
                                 <div class="col-4">
                                     <p class="card-text" id="subNextPay">{{format_date next_payment}}</p>
@@ -62,14 +65,12 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </a>
         {{/each}}
-        {{/if}}
-
-        <div id="addBtnDiv">
-            <a href="/addsub"><button type="button" id="addSubBtn">+</button></a>
-        </div>
+        {{/if}}  
+        <a href="/addsub"><img class="img-fluid" src="../img/plus.png" id="addSubBtn"></a>
     </div>
 </div>
 
