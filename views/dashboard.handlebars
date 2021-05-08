@@ -1,14 +1,14 @@
 <div class="card">
     <div class="card-body" id="dashCard">
-        <div class="container-fluid">
-            <div class="row" id="dashRow">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters" id="dashRow">
                 <div class="col-2" id="dashLogo">
                     S
                 </div>
-                <div class="col-2">
+                <div class="col-2 d-flex justify-content-center">
                     <a href="/chart"><button type="button" id="chartBtn"><i class="fa fa-bar-chart"></i></button></a>
                 </div>
-                <div class="col-2 dropdown">
+                <div class="col-2 d-flex justify-content-center dropdown">
                     <button type="button" id="filterBtn"><i onclick="dropDown()"
                             class="dropbtn fa fa-sort"></i></button>
                     <div id="myDropdown" class="dropdown-content">
@@ -17,7 +17,7 @@
                         <a href="#" id="lowToHigh">Lowest to highest price</a>
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-2 d-flex justify-content-center">
                     <button type="button" id="logoutBtn"><i class="fa fa-sign-out"></i></button>
                 </div>
             </div>

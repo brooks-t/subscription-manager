@@ -44,6 +44,7 @@ body {
 
 .row {
     margin: 0;
+    padding: 0;
 }
 
 a {
@@ -57,7 +58,8 @@ a {
 }
 
 #dashCard {
-    padding-left: 0;
+    display: flex;
+    justify-content: center;
 }
 
 #dashRow {
@@ -68,15 +70,12 @@ a {
 
 #dashLogo {
     font-size: 200%;
-    margin-left: 1.5vw;
 }
 
 #chartBtn {
     background-color: #b3e1ee;
     border: 0;
     font-size: 250%;
-    text-align: center;
-    margin-left: 1vw;
 }
 
 #filterBtn {
