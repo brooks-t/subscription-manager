@@ -1,8 +1,5 @@
 let ctx = document.getElementById("myChart");
 
-fetch();
-const data = [];
-
 let myChart = new Chart(ctx, {
   type: "bar",
   data: {
