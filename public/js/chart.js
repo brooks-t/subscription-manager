@@ -1,5 +1,8 @@
 let ctx = document.getElementById("myChart");
 
+fetch();
+const data = [];
+
 let myChart = new Chart(ctx, {
   type: "bar",
   data: {
@@ -18,7 +21,7 @@ let myChart = new Chart(ctx, {
     ],
     datasets: [
       {
-        label: "subscriptions$",
+        label: "subscriptions",
         data: [12.5, 19, 3, 5, 2, 3],
         backgroundColor: [
           "rgba(255, 99, 132, 0.5)",
