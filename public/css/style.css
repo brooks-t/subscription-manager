@@ -129,7 +129,7 @@ a {
 }
 
 #subCard {
-    height: 100%;
+    height: 83vh;
     position: relative;
     overflow: scroll;
 }
