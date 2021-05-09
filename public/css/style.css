@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+img {
+    transform: translateZ(0);
+}
+
 body {
     background-color: #4d4d52;
     max-width: 800px;
@@ -139,7 +143,7 @@ a {
 }
 
 #subs {
-    background-color: #e6eff8;
+    background-color: #ffffff;
     border-radius: 10px;
     width: 100%;
     font-size: 86%;
@@ -179,6 +183,8 @@ a {
     position: fixed;
     bottom: 5%;
     right: 7%;
+    border-radius: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .addCard, .editCard {
@@ -200,6 +206,10 @@ a {
 #deleteAdded, #deleteEdited {
     position: absolute;
     right: 0;
+}
+
+#login-btn, #signup-btn, #saveEdited, #deleteEdited, #saveAdded, #deleteAdded {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*Colors:
