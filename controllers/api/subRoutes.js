@@ -65,7 +65,6 @@ router.get("/chart", withAuth, async (req, res) => {
 
     const subs = subData.get({plain: true});
 
-    console.log(subs);
     res.json(subs);
   } catch (err) {
     res.status(500).json(err);

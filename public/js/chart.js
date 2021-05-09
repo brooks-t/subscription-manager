@@ -22,65 +22,45 @@ fetch('/api/subscriptions/chart', {
       if (data.subscriptions[i].category === "Books") {
         bookData += data.subscriptions[i].amount
         totalData += data.subscriptions[i].amount
-        console.log("Books is now: ", bookData)
       }
       else if (data.subscriptions[i].category === "Education") {
         eduData += data.subscriptions[i].amount
         totalData += data.subscriptions[i].amount
-        console.log("Education is now: ", eduData)
       }
       else if (data.subscriptions[i].category === "Food/Grocery") {
         foodData += data.subscriptions[i].amount
         totalData += data.subscriptions[i].amount
-        console.log("Food/Grocery is now: ", foodData)
       }
       else if (data.subscriptions[i].category === "Health/Fitness") {
         healthData += data.subscriptions[i].amount
         totalData += data.subscriptions[i].amount
-        console.log("Health/Fitness is now: ", healthData)
       }
       else if (data.subscriptions[i].category === "Music/Audio") {
         musicData += data.subscriptions[i].amount
         totalData += data.subscriptions[i].amount
-        console.log("Music/Audio is now: ", musicData)
       }
       else if (data.subscriptions[i].category === "News") {
         newsData += data.subscriptions[i].amount
         totalData += data.subscriptions[i].amount
-        console.log("News is now: ", newsData)
       }
       else if (data.subscriptions[i].category === "Pets") {
         petData += data.subscriptions[i].amount
         totalData += data.subscriptions[i].amount
-        console.log("Pets is now: ", petData)
       }
       else if (data.subscriptions[i].category === "Shopping") {
         shopData += data.subscriptions[i].amount
         totalData += data.subscriptions[i].amount
-        console.log("Shopping is now: ", shopData)
       }
       else if (data.subscriptions[i].category === "Video") {
         videoData += data.subscriptions[i].amount
         totalData += data.subscriptions[i].amount
-        console.log("Video is now: ", videoData)
       }
       else {
         otherData += data.subscriptions[i].amount
         totalData += data.subscriptions[i].amount
-        console.log("Other is now: ", otherData)
       }
     }
-    console.log("Books: ", bookData);
-    console.log("Education: ", eduData);
-    console.log("Food/Grocery: ", foodData);
-    console.log("Health/Fitness: ", healthData);
-    console.log("Music/Audio: ", musicData);
-    console.log("News: ", newsData);
-    console.log("Pets: ", petData);
-    console.log("Shopping: ", shopData);
-    console.log("Video: ", videoData);
-    console.log("Other: ", otherData);
-    console.log("TOTAL SPENDING: ", totalData);
+    
     const bookChart = bookData;
     const eduChart = eduData;
     const foodChart = foodData;
