@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Subscription } = require("../../models");
+const { User } = require("../../models");
 const withAuth = require("../../utils/auth");
 //creates a new subscription
 router.post("/", withAuth, async (req, res) => {
@@ -49,6 +50,23 @@ router.delete("/:id", withAuth, async (req, res) => {
     }
 
     res.status(200).json(subscriptionsData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+router.get("/chart", withAuth, async (req, res) => {
+  try {
+    const subData = await User.findByPk(req.session.user_id, {
+      attributes: {exclude: ["password"]},
+      include: [{model: Subscription}],
+    } );
+
+    const subs = subData.get({plain: true});
+
+    console.log(subs);
+    res.json(subs);
   } catch (err) {
     res.status(500).json(err);
   }
