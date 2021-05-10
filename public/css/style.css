@@ -185,6 +185,7 @@ a {
     right: 7%;
     border-radius: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
 }
 
 .addCard, .editCard {
@@ -211,15 +212,3 @@ a {
 #login-btn, #signup-btn, #saveEdited, #deleteEdited, #saveAdded, #deleteAdded {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-/*Colors:
-#FFE0BE: orange
-#FFF1CC: yellow
-#C5EABD: green
-#D2CFE9: indigo
-#F5D8F2: purple
-#9DBBE3: light blue
-font-family: 'Itim', cursive;
-background-color: #b1b1b1
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-*/
