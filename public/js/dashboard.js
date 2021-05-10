@@ -1,13 +1,14 @@
 const title = document.querySelectorAll('#subTitle');
 const iconDiv = document.querySelectorAll("#iconDiv");
 const subs = document.querySelectorAll('#subInfo');
+let myFuncCalls = 0;
 
 for (i = 0; i < title.length; i++) {
     const firstLetter = title[i].innerHTML.charAt(0)
     iconDiv[i].append(firstLetter)
 }
 
-function dropDown() {
+const dropDown = async () => {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
@@ -45,7 +46,34 @@ window.onclick = function (event) {
 
 } */
 
-function filterPriceHandler(arg, sel, elem, order) {
+const filterPriceHandler = async (arg, sel, elem, order) => {
+    const $selector = $(sel);
+    if (myFuncCalls >= 1) {
+        $element = $selector.children(elem);
+    } else {
+        $element = $selector.children().children(elem);
+    }
+    $element.sort(function (a, b) {
+        const an = parseInt(a.getAttribute(arg)),
+            bn = parseInt(b.getAttribute(arg));
+        if (order == "asc") {
+            if (an > bn)
+                return 1;
+            if (an < bn)
+                return -1;
+        } else if (order == "desc") {
+            if (an < bn)
+                return 1;
+            if (an > bn)
+                return -1;
+        }
+        return 0;
+    });
+    $element.detach().appendTo($selector);
+    myFuncCalls++;
+}
+
+const filterPriceHandlerAfterFirst = async (arg, sel, elem, order) => {
     const $selector = $(sel),
         $element = $selector.children(elem);
     $element.sort(function (a, b) {
@@ -85,12 +113,16 @@ const logout = async () => {
     .addEventListener('click', function () { filterAlphaHandler("data-title", "div#subCardBody", "div") }); */
 
 document
+    .querySelector('.dropbtn')
+    .addEventListener('click', dropDown);
+
+document
     .querySelector('#lowToHigh')
-    .addEventListener('click', function () { filterPriceHandler("data-category", "div#subCardBody", "div", "asc") });
+    .addEventListener('click', function () { filterPriceHandler("data-category", "div#subCardBody", "div.substers", "asc") });
 
 document
     .querySelector('#highToLow')
-    .addEventListener('click', function () { filterPriceHandler("data-category", "div#subCardBody", "div", "desc") });
+    .addEventListener('click', function () { filterPriceHandler("data-category", "div#subCardBody", "div.substers", "desc") });
 
 document
     .querySelector('#logoutBtn')
